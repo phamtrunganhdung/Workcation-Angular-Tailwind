@@ -1,0 +1,11 @@
+<div class="max-w-md sm:max-w-xl lg:max-w-6xl mx-auto px-8 lg:px-12 py-8">
+  <h2 class="text-xl text-gray-900">Popular destinations</h2>
+  <p class="text-gray-600">
+    A selection of great work-friendly cities with lots to see and explore.
+  </p>
+  <div class="flex flex-wrap -mx-4">
+    @for (item of items; track $index) {
+    <div app-place [item]="item"></div>
+    }
+  </div>
+</div>

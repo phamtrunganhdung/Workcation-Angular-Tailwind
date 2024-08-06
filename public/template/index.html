@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Workcation</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-container">
+        <img
+          class="img-home"
+          src="https://aepnat-workcation-tailwind.netlify.app/img/logo-inverted.svg"
+        />
+        <div class="right-menu">
+          <div class="right-menu-items font-semibold">List your property</div>
+          <div class="right-menu-items font-semibold">Trips</div>
+          <div class="right-menu-items font-semibold">Message</div>
+          <div class="avatar-container">
+            <button class="avatar-btn" onclick="myFunction()">
+              <img
+                class="avt-image"
+                src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=256&q=80"
+              />
+            </button>
+            <div id="dropdown-avatar" class="dropdown-content">
+              <a class="drop-down-options" href="#home">Account settings</a>
+              <a class="drop-down-options" href="#about">Supports</a>
+              <a class="drop-down-options" href="#contact">Sign out</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="general-info">
+        <div class="general-info-container">
+          <div class="general-info-left">
+            <div class="info-left-container">
+              <h1>
+                You can work from anywhere.
+                <br />
+                <span>Take advantage of it.</span>
+              </h1>
+              <p>
+                Workcation helps you find work-friendly rentals in beautiful
+                locations so you can enjoy some nice weather even when you're
+                not on vacation.
+              </p>
+              <button>BOOK YOUR ESCAPE</button>
+            </div>
+          </div>
+
+          <div class="general-info-right">
+            <img
+              src="https://aepnat-workcation-tailwind.netlify.app/img/beach-work.jpg"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="detail-info">
+        <div class="detail-info-container">
+          <span>Popular destinations</span>
+          <p>
+            A selection of great work-friendly cities with lots to see and
+            explore.
+          </p>
+          <div class="grid-detail">
+            <div class="grid-items">
+              <img
+                src="https://aepnat-workcation-tailwind.netlify.app/img/toronto.jpg"
+              />
+              <div class="grid-items-info">
+                <span class="location">Toronto</span>
+                <span class="price">$120 / night average</span>
+                <span class="explore">Explore 76 properties</span>
+              </div>
+            </div>
+            <div class="grid-items">
+              <img
+                src="https://aepnat-workcation-tailwind.netlify.app/img/malibu.jpg"
+              />
+              <div class="grid-items-info">
+                <span class="location">Malibu</span>
+                <span class="price">$215 / night average</span>
+                <span class="explore">Explore 43 properties</span>
+              </div>
+            </div>
+            <div class="grid-items">
+              <img
+                src="https://aepnat-workcation-tailwind.netlify.app/img/chicago.jpg"
+              />
+              <div class="grid-items-info">
+                <span class="location">Chicago</span>
+                <span class="price">$130 / night average</span>
+                <span class="explore">Explore 115 properties</span>
+              </div>
+            </div>
+            <div class="grid-items">
+              <img
+                src="https://aepnat-workcation-tailwind.netlify.app/img/seattle.jpg"
+              />
+              <div class="grid-items-info">
+                <span class="location">Seattle</span>
+                <span class="price">$135 / night average</span>
+                <span class="explore">Explore 63 properties</span>
+              </div>
+            </div>
+            <div class="grid-items">
+              <img
+                src="https://aepnat-workcation-tailwind.netlify.app/img/colorado.jpg"
+              />
+              <div class="grid-items-info">
+                <span class="location">Colorado</span>
+                <span class="price">$85 / night average</span>
+                <span class="explore">Explore 47 properties</span>
+              </div>
+            </div>
+            <div class="grid-items">
+              <img
+                src="https://aepnat-workcation-tailwind.netlify.app/img/miami.jpg"
+              />
+              <div class="grid-items-info">
+                <span class="location">Miami</span>
+                <span class="price">$115 / night average</span>
+                <span class="explore">Explore 86 properties</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function myFunction() {
+        document.getElementById("dropdown-avatar").classList.add("show");
+      }
+
+      window.onclick = function (event) {
+        if (
+          !event.target.matches(".avatar-btn") &&
+          !event.target.matches(".avt-image")
+        ) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains("show")) {
+              openDropdown.classList.remove("show");
+            }
+          }
+        }
+      };
+    </script>
+  </body>
+</html>
